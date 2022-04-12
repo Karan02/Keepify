@@ -29,7 +29,8 @@ function updateNote(title,content,_id){
   fetch("http://localhost:3001/notes", {
     method: "PUT",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      'Authorization':localStorage.getItem("token")
     },
     body: JSON.stringify({
       id: _id,

@@ -123,7 +123,7 @@ function Notes ({ onAdd }) {
             placeholder="Title"
             name="title"
             id="title"
-            onChange={()=>handleChange()}
+            onChange={(e)=>handleChange(e)}
           />
         )}
         <p>
@@ -132,11 +132,11 @@ function Notes ({ onAdd }) {
             onClick={() => handleExpanded()}
             name="content"
             placeholder="Take a note..."
-            onChange={()=>handleChange()}
+            onChange={(e)=>handleChange(e)}
             rows={isExpanded ? 3 : 1}
           ></textarea>
         </p>
-        <button onClick={()=>postData()}>
+        <button onClick={(e)=>postData(e)}>
           <IoIosAdd size={35} />
         </button>
        
